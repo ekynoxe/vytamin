@@ -1,0 +1,20 @@
+== Vytamin
+
+Vytamin is a ruby on rails sports log application.
+At the moment it only includes swimming, cycling, running and triathlon, but
+should be updated regularly with more sports
+
+
+== Getting Started
+
+1. Clone locally the git repository
+	git clone git@github.com:ekynoxe/vytamin.git
+	cd vytamin
+	
+2. Run migrations to create database and schema
+	rake db:create db:migrate
+	
+3. Run the app
+	rails server
+	
+4. Navigate in your browser to http://127.0.0.1:3000
