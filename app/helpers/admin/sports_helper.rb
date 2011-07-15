@@ -1,2 +1,2 @@
-module SportsHelper
+module Admin::SportsHelper
 end

@@ -1,4 +1,4 @@
-class SportsController < ApplicationController
+class Admin::SportsController < ApplicationController
   def index
   end
 
