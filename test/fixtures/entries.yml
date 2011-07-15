@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  startdate: 2011-07-14 13:34:21
+  enddate: 2011-07-14 13:34:21
+  distance: 1
+  sport_id: 1
+
+two:
+  title: MyString
+  description: MyText
+  startdate: 2011-07-14 13:34:21
+  enddate: 2011-07-14 13:34:21
+  distance: 1
+  sport_id: 1
