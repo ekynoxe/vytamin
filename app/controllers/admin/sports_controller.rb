@@ -1,4 +1,7 @@
 class Admin::SportsController < ApplicationController
+  before_filter :require_admin
+  layout 'admin'
+  
   def index
     @sports = Sport.all
   end

@@ -1,4 +1,7 @@
 class EntriesController < ApplicationController
+  before_filter :require_user
+  before_filter :store_location
+  
   def index
     @entries = Entry.all
   end
