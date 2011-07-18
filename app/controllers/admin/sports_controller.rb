@@ -7,9 +7,17 @@ class Admin::SportsController < ApplicationController
   end
 
   def new
+    @sport = Sport.new
   end
 
   def create
+    @sport = Sport.new(params[:sport])
+    if !@sport.save
+      flash[:item_notice]='could not create sport'
+      render :new
+      return
+    end
+    redirect_to admin_sports_url
   end
 
   def edit

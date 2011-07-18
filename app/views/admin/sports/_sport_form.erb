@@ -1,0 +1,5 @@
+<%= form_for @sport, :url => admin_sports_url, :html => { :class => "wide_form", :id => "new_sport_form" } do |f| %>
+	<%= errors_for(@sport, "Opps, unable to add this sport").html_safe %>
+	<%= f.text_field :name, :class => "wide_input", :placeholder => 'sport name' %>
+	<%= f.submit 'add', :id => "add_sport_submit" %>
+<% end %>

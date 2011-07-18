@@ -1,6 +1,10 @@
 <h1>Sports</h1>
-<ul>
-	<% @sports.each do |sport| %>
-	<li><%= sport.name %></li>
-	<% end %>
-</ul>
+<div id="box">
+	<p><%= link_to 'back to admin home', admin_url %></p>
+	<p><%= link_to 'add a sport', new_admin_sport_url %></p>
+	<ul>
+		<% @sports.each do |sport| %>
+		<li><%= sport.name %></li>
+		<% end %>
+	</ul>
+</div>

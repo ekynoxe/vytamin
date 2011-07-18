@@ -1,2 +1,6 @@
-<h1>Sports#new</h1>
-<p>Find me in app/views/sports/new.html.erb</p>
+<h1>Add a <span class="hilighted">sport</span>.</h1>
+<div id="box">
+<p><%= link_to 'back to admin home', admin_url %></p>	
+<p><%= link_to 'admin sports', admin_sports_url %></p>
+<%= render :partial => 'admin/sports/sport_form', :sport => @sport %>
+</div>

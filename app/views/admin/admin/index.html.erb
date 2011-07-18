@@ -2,4 +2,5 @@
 <div id="box">
 	<h2>Number of <%= link_to 'sports', admin_sports_url %></h2>
 	<p><%= Sport.all.size %></p>
+	<p><%= link_to 'add a sport', new_admin_sport_url %></p>
 </div>
