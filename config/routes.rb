@@ -1,7 +1,4 @@
 VytaminCom::Application.routes.draw do
-
-  get "admin/index"
-
   root :to => "entries#index"
     
   match '/register'         => "users#new",             :as => :register
@@ -33,6 +30,7 @@ VytaminCom::Application.routes.draw do
   namespace :admin do |admin|
     match '/' => 'admin#index'
     resources :sports
+    resources :users
   end
   
   match ":controller(/:action/:id/:item_id)", :to => redirect("/")

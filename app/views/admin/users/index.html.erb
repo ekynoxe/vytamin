@@ -1,0 +1,10 @@
+<% page_title "Admin users" %>
+<h1><span class="highlight">Admin</span> Users</h1>
+<div id="box">
+	<p><%= link_to 'back to admin home', admin_url %></p>
+	<ul>
+		<% User.all.each do |user| %>
+		<li><%= user.full_name %></li>
+		<% end %>
+	</ul>
+</div>
