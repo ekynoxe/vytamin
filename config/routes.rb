@@ -29,6 +29,7 @@ VytaminCom::Application.routes.draw do
   
   namespace :admin do |admin|
     match '/' => 'admin#index'
+    resources :entries
     resources :sports
     resources :users
   end

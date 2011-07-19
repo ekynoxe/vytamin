@@ -14,4 +14,7 @@
 		<li><%= user.full_name %></li>
 		<% end %>
 	</ul>
+	
+	<h2><%= link_to 'Admin entries', admin_entries_url %></h2>
+	<p>There are <%= Entry.all.size %> entries</p>
 </div>
