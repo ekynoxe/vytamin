@@ -27,7 +27,7 @@ module ApplicationHelper
     if title
       content_for(:page_title) { " - " + title }
     else
-      content_for?(:page_title) ? content_for(:page_title) : APP_CONFIG[:site_name]  # or a hard-coded default
+      content_for?(:page_title) ? content_for(:page_title) : ""  # APP_CONFIG[:site_name] or a hard-coded default
     end
   end
 end
