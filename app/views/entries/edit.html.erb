@@ -1,2 +1,6 @@
-<h1>Entries#edit</h1>
-<p>Find me in app/views/entries/edit.html.erb</p>
+<% page_title "Edit Entry" %>
+<h1><span class="highlighted">Edit</span> entry</h1>
+<div id="box">
+	<%= render :partial => 'entry_form' %>
+	<p><%= link_to "Back to List", user_entries_path(current_user) %></p>
+</div>

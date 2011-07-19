@@ -1,8 +1,32 @@
+<% page_title "Entries" %>
 <h1>Entries</h1>
 <div id="box">
-	<ul>
-		<% @entries.each do |entry| %>
-		<li><%= entry.title %></li>
-		<% end %>
-	</ul>
+	<p><%= link_to "New Entry", new_entry_path %></p>
+	<p><%= will_paginate @entries %></p>
+	<table>
+	  <tr>
+	    <th>Title</th>
+	    <th>Description</th>
+	    <th>Startdate</th>
+	    <th>Enddate</th>
+		<th>Duration</th>
+	    <th>Distance</th>
+	    <th>Sport</th>
+	  </tr>
+	  <% @entries.each do |entry| %>
+	    <tr>
+	      <td><%=h entry.title %></td>
+	      <td><%=h entry.description %></td>
+	      <td><%=h entry.startdate %></td>
+	      <td><%=h entry.enddate %></td>
+		  <td><%=h entry.duration %></td>
+	      <td><%=h entry.distance %></td>
+	      <td><%=h entry.sport.name %></td>
+	      <td><%= link_to "Edit", edit_entry_path(entry) %></td>
+	      <td><%= link_to "Destroy", entry, :confirm => 'Are you sure?', :method => :delete %></td>
+	    </tr>
+	  <% end %>
+	</table>
+
+	<%= will_paginate @entries %>
 </div>
